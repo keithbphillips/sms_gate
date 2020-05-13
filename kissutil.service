@@ -1,0 +1,19 @@
+[Unit]
+Description=kissutil daemon
+After=network.target
+After=direwolf.target
+StartLimitInterval=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+Directory=/home/pi
+ExecStart=/usr/local/bin/kissutil -o /home/pi/smsmessages/out -f /home/pi/smsmessages/in -p /tmp/kisstnc -h localhost
+WorkingDirectory=/home/pi
+User=pi
+Directory=pi
+
+[Install]
+WantedBy=multi-user.target
+Alias=kissutil.service

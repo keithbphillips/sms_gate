@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Send a Text to a phone number</h1>
+    Phone number as 1234567890 with no spaces
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.phone_num.label }}<br>
+            {{ form.phone_num(size=32) }}<br>
+            {% for error in form.phone_num.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.sms_text.label }}<br>
+            {{ form.sms_text(size=32) }}<br>
+            {% for error in form.sms_text.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - SMS TEXTER</title>
+        {% else %}
+        <title>Send Text By Radio</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+        Send/Receive SMS Texts:
+	<h1>
+	<a href="/">Home</a>
+        <a href="/send">Send</a>
+        <a href="/messages">Messages</a>
+	<h1>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,14 @@
+[Unit]
+Description=SMS to RF
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/smsmessages/sms_gate
+Environment=FLASK_CONFIG=production
+Environment=FLASK_APP=sms_gate.py
+ExecStart=/home/pi/smsmessages/sms_gate/venv/bin/gunicorn -b 0.0.0.0:5000 -w 4 sms_gate:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

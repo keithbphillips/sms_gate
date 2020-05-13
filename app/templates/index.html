@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<<<<<<< HEAD
+=======
+
+<script type="text/javascript">
+var timer = function() {
+    setTimeout(function(){ window.location.reload(); }, 20000);
+};
+timer();
+</script>
+
+    <h1>Hi, KI7ADJ!</h1>
+>>>>>>> a6efbbbbc6ff9a53c998a369a555902dbcc40bac
+    {% for post in posts %}
+    <div><p>You sent: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+    {% include "map.html" %}
+{% endblock %}
+

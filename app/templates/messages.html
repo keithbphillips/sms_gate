@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script type="text/javascript">
+var timer = function() {
+    setTimeout(function(){ window.location.reload(); }, 20000);
+};
+timer();
+</script>
+
+    <h1>Hi, KI7ADJ!</h1>
+    {% for post in posts %}
+    <div><p><h2>You sent: <b>{{ post.body }}</b></h2></p></div>
+    {% endfor %}
+{% endblock %}
+

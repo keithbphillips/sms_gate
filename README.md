@@ -16,3 +16,10 @@ Requires: python3+, kissutil, direwolf
 - systemctl start kissutil
 - systemctl start smsgate
 - add gen_map.py to crontab */5 * * * *
+
+## To do:
+Mark messages for deletion feature
+Improve map display
+Use APRS icons
+Reduce map size on page
+

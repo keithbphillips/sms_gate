@@ -15,3 +15,4 @@ Requires: python3+, kissutil, direwolf
 - systemctl enable smsgate
 - systemctl start kissutil
 - systemctl start smsgate
+- add gen_map.py to crontab */5 * * * *

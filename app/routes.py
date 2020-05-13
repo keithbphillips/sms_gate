@@ -2,10 +2,7 @@ import codecs
 import os
 import re
 import folium
-<<<<<<< HEAD
 from app.gen_map import gen_map as gen_map
-=======
->>>>>>> a6efbbbbc6ff9a53c998a369a555902dbcc40bac
 from datetime import datetime as dt
 from flask import render_template, flash, redirect
 from app import app
@@ -21,12 +18,8 @@ def transmit_msg(phone, sms):
 
 @app.route('/')
 def index():
-<<<<<<< HEAD
     gen_map()
     return render_template('index.html', title='Map')
-=======
-    return render_template('index.html', title='Send')
->>>>>>> a6efbbbbc6ff9a53c998a369a555902dbcc40bac
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():

@@ -1,15 +1,9 @@
 import folium
-<<<<<<< HEAD
 from folium.features import DivIcon
 import re
 from re import search 
 from datetime import datetime as dt
 from datetime import timedelta
-=======
-import re
-from re import search 
-from datetime import datetime as dt
->>>>>>> a6efbbbbc6ff9a53c998a369a555902dbcc40bac
 import codecs
 import os
 from os import walk
@@ -19,8 +13,6 @@ map_coords = {}
 mypath = '/home/pi/smsmessages/out'
 mycall = 'KI7ADJ-1'
 mycoords = [45.816040, -122.999950]
-
-<<<<<<< HEAD
 
 def gen_map():
     files = []
@@ -154,4 +146,3 @@ for entry in map_coords:
     add_marker(entry, map_coords[entry])
 
 folium_map.save('/home/pi/smsmessages/sms_gate/app/templates/map.html')
->>>>>>> a6efbbbbc6ff9a53c998a369a555902dbcc40bac

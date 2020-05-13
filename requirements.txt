@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 cython
 wheel
-=======
->>>>>>> a6efbbbbc6ff9a53c998a369a555902dbcc40bac
 flask
 flask-wtf
 python-dotenv
